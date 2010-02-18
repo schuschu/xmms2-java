@@ -27,7 +27,7 @@ public final class SignalCommandImpl extends AbstractSimpleCommand implements Si
 	private Client client;
 
 	public SignalCommandImpl(IpcSignal signal) {
-		super(IpcObject.SIGNAL, IpcCommand.SIGNAL, signal);
+		super(IpcObject.SIGNAL, IpcCommand.SIGNAL, signal.ordinal());
 		this.signal = signal;
 		this.client = null;
 	}
