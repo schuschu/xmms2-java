@@ -31,4 +31,8 @@ public static Command info(int id) {
 		return new BasicCommand(IpcObject.MEDIALIB, IpcCommand.INFO, id);
 	}
 
+public static Command pathImport(String path) {
+		return new BasicCommand(IpcObject.MEDIALIB, IpcCommand.PATH_IMPORT, path);
+}
+
 }
