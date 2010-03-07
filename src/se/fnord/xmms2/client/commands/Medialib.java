@@ -25,7 +25,7 @@ public final class Medialib {
 	public static Command changeBroadcast() {
 		return Signal.broadcast(IpcSignal.MEDIALIB_ENTRY_UPDATE);
 	}
-	
+
 	public static Command addBroadcast() {
 		return Signal.broadcast(IpcSignal.MEDIALIB_ENTRY_ADDED);
 	}
@@ -37,6 +37,10 @@ public final class Medialib {
 	public static Command pathImport(String path) {
 		return new BasicCommand(IpcObject.MEDIALIB, IpcCommand.PATH_IMPORT,
 				path);
+	}
+
+	public static Command removeId(int id) {
+		return new BasicCommand(IpcObject.MEDIALIB, IpcCommand.REMOVE_ID, id);
 	}
 
 }
